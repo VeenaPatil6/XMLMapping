@@ -1,0 +1,11 @@
+C:\Users\veena\Documents\Visual Studio 2010\Templates\Projects\ReadXMLData\ReadXMLData\bin\Debug\ReadXMLData.exe
+C:\Users\veena\Documents\Visual Studio 2010\Templates\Projects\ReadXMLData\ReadXMLData\bin\Debug\ReadXMLData.pdb
+C:\Users\veena\Documents\Visual Studio 2010\Templates\Projects\ReadXMLData\ReadXMLData\obj\x86\Debug\ReadXMLData.Form1.resources
+C:\Users\veena\Documents\Visual Studio 2010\Templates\Projects\ReadXMLData\ReadXMLData\obj\x86\Debug\ReadXMLData.Properties.Resources.resources
+C:\Users\veena\Documents\Visual Studio 2010\Templates\Projects\ReadXMLData\ReadXMLData\obj\x86\Debug\ReadXMLData.csproj.GenerateResource.Cache
+C:\Users\veena\Documents\Visual Studio 2010\Templates\Projects\ReadXMLData\ReadXMLData\obj\x86\Debug\ReadXMLData.exe
+C:\Users\veena\Documents\Visual Studio 2010\Templates\Projects\ReadXMLData\ReadXMLData\obj\x86\Debug\ReadXMLData.pdb
+C:\Users\veena\Documents\Visual Studio 2010\Templates\Projects\ReadXMLData\ReadXMLData\bin\Debug\ReadXMLData.exe.manifest
+C:\Users\veena\Documents\Visual Studio 2010\Templates\Projects\ReadXMLData\ReadXMLData\bin\Debug\ReadXMLData.application
+C:\Users\veena\Documents\Visual Studio 2010\Templates\Projects\ReadXMLData\ReadXMLData\obj\x86\Debug\ReadXMLData.exe.manifest
+C:\Users\veena\Documents\Visual Studio 2010\Templates\Projects\ReadXMLData\ReadXMLData\obj\x86\Debug\ReadXMLData.application
