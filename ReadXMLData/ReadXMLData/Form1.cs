@@ -28,9 +28,9 @@ namespace ReadXMLData
         private void button1_Click(object sender, EventArgs e)
         {
 
-          DataSet xmldata = GetData();
+            DataSet xmldata = GetData();
 
-          SQLInsert(xmldata);
+            SQLInsert(xmldata);
 
         }
 
@@ -53,11 +53,10 @@ namespace ReadXMLData
         #region GetData
 
         private DataSet GetData()
-
-    {
-         #region "Reading XML with LINQ"
+        {
+            #region "Reading XML with LINQ"
             string defaultValue = null;
-            List<string> mappingTypes = new List<string>();
+            string mappingtype = string.Empty;
             DataSet ds = new DataSet();
 
             FileInfo file = new FileInfo(@"S:\Config.xml");
@@ -68,25 +67,29 @@ namespace ReadXMLData
                                                  select element;
                 CreateDataTable();
 
-                foreach (var table in Mappings)
+                foreach (var mappingnodes in Mappings)
                 {
-                    DataRow row = dt.NewRow();
 
-                    foreach (XAttribute attribute in table.Attributes("type"))
+                    foreach (XAttribute attribute in mappingnodes.Attributes("type"))
                     {
-                        //mappingTypes.Add(attribute.Value);
-                        row["Mapping Type"] = attribute.Value;
+                        mappingtype = attribute.Value;
+
                     }
-                    IEnumerable<XElement> tables = from el in table.Elements("Table")
+                    IEnumerable<XElement> tables = from el in mappingnodes.Elements("Table")
                                                    select el;
 
-                    foreach (var entry in tables)
+                    foreach (var tablenodes in tables)
                     {
-                        XAttribute tablename = entry.Attribute("tableName");
-                        XAttribute tableid = entry.Attribute("tableId");
+                        DataRow row = dt.NewRow();
 
-                        IEnumerable<XElement> entrynode = from tbl in entry.Elements("Entry") select tbl;
-                        //Console.WriteLine("{0}  {1}", item1.FirstAttribute, item1.FirstAttribute.NextAttribute);\\
+                        XAttribute tablename = tablenodes.Attribute("tableName");
+                        XAttribute tableid = tablenodes.Attribute("tableId");
+
+                        row["Table Name"] = tablename.Value;
+                        row["Table ID"] = tableid.Value;
+                        row["Mapping Type"] = mappingtype;
+
+                        IEnumerable<XElement> entrynode = from tbl in tablenodes.Elements("Entry") select tbl;
 
                         foreach (var defaultEntry in entrynode)
                         {
@@ -115,15 +118,13 @@ namespace ReadXMLData
 
                                         if (defval.PreviousAttribute.Value.Equals("FLD_ID"))
                                         {
-                                            row["Table Name"] = tablename.Value;
-                                            row["Table ID"] = tableid.Value;
                                             row["FLD_ID"] = defaultValue;
                                         }
 
                                     }
 
                                 }
-                                if (fielddataclcolumns.Count() != 0)
+                                else if (fielddataclcolumns.Count() != 0)
                                 {
                                     defval = fielddataclcolumns.Attributes("defaultValue").FirstOrDefault();
 
@@ -133,20 +134,21 @@ namespace ReadXMLData
 
                                         if (defval.PreviousAttribute.Value.Equals("FLD_DATA_CL_ID"))
                                         {
-                                            row["Table Name"] = tablename.Value;
-                                            row["Table ID"] = tableid.Value;
                                             row["FLD_DATA_CL_ID"] = defaultValue;
                                         }
                                     }
+                                }
+                                else
+                                {
+                                    row["FLD_ID"] = string.Empty;
+                                    row["FLD_DATA_CL_ID"] = string.Empty;
                                 }
 
                             }
 
                         }
+                        dt.Rows.Add(row);
                     }
-                    // MessageBox.Show(result.ToString());
-                    dt.Rows.Add(row);
-
                 }
                 ds.Tables.Add(dt);
             }
@@ -154,7 +156,7 @@ namespace ReadXMLData
                 throw new FileNotFoundException(file.FullName);
             return ds;
             #endregion
-    }
+        }
 
 
         #endregion
