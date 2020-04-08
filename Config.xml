@@ -1,0 +1,3961 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MappingConfig vendor="Bloomberg" dbUrl="jdbc:oracle:thin:GC_860DB/GC_860DB@inbld08:1521:inbld08"
+  dbDriver="oracle.jdbc.driver.OracleDriver" lookupDurationInDays="1">
+  <MailProperties sendEMail="N">
+    
+  </MailProperties>
+  <Mapping type="LU_MTY_TYP" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00100149" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_COLLAT_TYP" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_DATA_CL_ID" defaultValue="COLLTYPE" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+        <RelatedSuggestions>
+          <Suggestion value="Check for mapping in BBMuncipals for slash" />
+          <Suggestion value="#####Following are the queries where above suggestions apply#####" />
+        </RelatedSuggestions>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_EDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EDMV_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="NLS_CDE" defaultValue="ENGLISH" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="EFLD_DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="EXT_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INTRNL_DMN_VAL_ID" childColumn="INTRNL_DMN_VAL_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_CPN_TYP" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00100156" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_EDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EDMV_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="NLS_CDE" defaultValue="ENGLISH" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="EFLD_DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="EXT_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INTRNL_DMN_VAL_ID" childColumn="INTRNL_DMN_VAL_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_QUOTE_TYP" uniqueFields="1">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00068067" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="8" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_EDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EDMV_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="NLS_CDE" defaultValue="ENGLISH" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="8" />
+          <Column columnName="EXT_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INTRNL_DMN_VAL_ID" childColumn="INTRNL_DMN_VAL_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_CALC_TYP" uniqueFields="1,2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00100151" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+        <RelatedSuggestions>
+          <Suggestion value="Only needs to be given if the yellow key includes Muni" />
+          <Suggestion
+            value="if Concatenation of CALC_TYP and CALC_TYP_DES is greater than 40 character then Entry needs to be provided in Translation table CALC_TYPE_TT of BBCorpGovtConvPrfd.msf" />
+          <Suggestion value="#####Following are the queries where above suggestions apply#####" />
+        </RelatedSuggestions>
+      </Entry>
+    </Table>
+    <VendorFieldConcat id="2" tableName="FT_T_IDMV" uniqueFields="1,2">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <ConcatenatedEntry execute="N" id="1" delimeter="-">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00100151" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRefList="1,2" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRefList="1,2" maxAllowableLength="40" />
+        </MappedEntry>
+      </ConcatenatedEntry>
+    </VendorFieldConcat>
+  </Mapping>
+  <Mapping type="LU_DAY_CNT" uniqueFields="1">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <!--Table tableId="1" tableName="FT_T_IDMV">
+	<Entry execute="N" id="1"> 
+	<DefaultEntry> 
+	<Column columnName="FLD_ID" defaultValue="00100151"/> 
+    <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE"/>
+	<Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT"/> 
+    <Column columnName="MOD_RST_IND" defaultValue="N"/>
+	<Column columnName="DATA_SRC_ID" defaultValue="BB"/> 
+	</DefaultEntry> 
+    <MappedEntry> 
+	<Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="40"/> 
+	<Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40"/> 
+	</MappedEntry> 
+	</Entry> 
+	</Table> 
+	<Table tableId="2" tableName="FT_T_EDMV" > 
+    <Entry execute="N" id="1"> 
+	<DefaultEntry> 
+	<Column columnName="NLS_CDE" defaultValue="ENGLISH"/> 
+	<Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE"/> 
+	<Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD"/> 
+	<Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE"/>
+	<Column columnName="DATA_SRC_ID" defaultValue="BB"/>
+	<Column columnName="START_TMS" defaultValue="SYSDATE"/> 
+    </DefaultEntry> 
+	<MappedEntry> 
+	<Column columnName="EXT_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="40"/> 
+	<Column columnName="EXT_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40"/> 
+	</MappedEntry> 
+	</Entry> 
+	</Table> -->
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00001810" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="3" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="3" />
+        </MappedEntry>
+        <RelatedSuggestions>
+          <Suggestion
+            value="Translation table changes in BBMortgageNonPool.msf(SEQUENCE2),BBPreferredExchangeTraded.msf(SEQUENCE1),BBPreferreds.msf(SEQUENCE1),verify the insert in sync with the mapping" />
+          <Suggestion value="#####Following are the queries where above suggestions apply#####" />
+        </RelatedSuggestions>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00001815" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="3" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+        <RelatedSuggestions>
+          <Suggestion
+            value="Translation table changes in BBMortgageNonPool.msf(SEQUENCE2),BBPreferredExchangeTraded.msf(SEQUENCE1),BBPreferreds.msf(SEQUENCE1),verify the insert in sync with the mapping" />
+          <Suggestion value="#####Following are the queries where above suggestions apply#####" />
+        </RelatedSuggestions>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INTRNL_DMN_VAL_ID" childColumn="INTRNL_DMN_VAL_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_CRNCY" uniqueFields="1">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_ISSU">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INSTR_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="ACCESS_AUTH_TYP" defaultValue="PUBLIC" />
+          <Column columnName="ISS_ACTVY_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="ISS_TYP" defaultValue="CURRENCY" />
+          <Column columnName="PREF_ID_CTXT_TYP" defaultValue="ISO CURR" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="DENOM_CURR_CDE" vendorFieldRef="1" maxAllowableLength="3" />
+          <Column columnName="ISS_ALPH_SRCH_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="PREF_ISS_ID" vendorFieldRef="1" maxAllowableLength="100" />
+          <Column columnName="PREF_ISS_NME" vendorFieldRef="2" maxAllowableLength="500" />
+          <Column columnName="PREF_ISS_DESC" vendorFieldRef="2" maxAllowableLength="4000" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_ISID">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="ISID_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="ID_CTXT_TYP" defaultValue="ISO CURR" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="PREF_ID_CTXT_TYP" defaultValue="ISO CURR" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="ISS_ID" vendorFieldRef="1" maxAllowableLength="100" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="3" tableName="FT_T_ISDE">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="ISDE_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="NLS_CDE" defaultValue="ENGLISH" />
+          <Column columnName="DESC_USAGE_TYP" defaultValue="PRIMARY" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="VENDOR" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="VENDOR" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="ISS_DESC" vendorFieldRef="2" maxAllowableLength="4000" />
+          <Column columnName="ISS_NME" vendorFieldRef="1" maxAllowableLength="500" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="4" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_DATA_CL_ID" defaultValue="CURRENCY" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="3" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="5" tableName="FT_T_CYCH">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="CYCH_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="ISO_CURR_CDE" vendorFieldRef="1" maxAllowableLength="3" />
+          <Column columnName="CURR_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INSTR_ID" childColumn="INSTR_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+    <TableToTableRelation referDBParent="Y"  id="2">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="3" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INSTR_ID" childColumn="INSTR_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+    <TableToTableRelation referDBParent="Y"  id="3">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="5" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INSTR_ID" childColumn="INSTR_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_SINK_TYP" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00100173" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00100172" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_CALL_PARTIAL" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00100153" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_MTG_PREPAY_TYP" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00101415" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_MTG_AMORT_TYP" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00101403" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_SECURITY_TYP" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_EIST">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EIST_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="ISCD_OID" defaultValue="Send Mail to BA,we don't support M-Mkt" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_ISS_TYP_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="EXT_ISS_TYP_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_CFG_VRET">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="VND_RQST_TYP" defaultValue="As per the yellow key" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_ISS_TYP_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_DVD_TYP_LAST" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00163288" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="8" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_EDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EDMV_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="NLS_CDE" defaultValue="ENGLISH" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="EFLD_DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="8" />
+          <Column columnName="EXT_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INTRNL_DMN_VAL_ID" childColumn="INTRNL_DMN_VAL_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_COUNTRY" uniqueFields="1">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_GUNT">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="CROSS_REF_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="PRNT_GU_TYP" defaultValue="COUNTRY" />
+          <Column columnName="PRNT_GU_CNT" defaultValue="1" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="CAL_ID" defaultValue="PRPTUAL" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="STOP_PAY_IND" defaultValue="N" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="PRNT_GU_ID" vendorFieldRef="1" maxAllowableLength="8" />
+          <Column columnName="GU_NME" vendorFieldRef="2" maxAllowableLength="256" />
+          <Column columnName="CNTRY_CDE" vendorFieldRef="1" maxAllowableLength="6" />
+        </MappedEntry>
+        <RelatedSuggestions>
+          <Suggestion value="Verify this insert also this insert needs to be given if the yellow key is Mtge" />
+          <Suggestion value="#####Following are the queries where above suggestions apply#####" />
+        </RelatedSuggestions>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_EQY_PRIM_EXCH" uniqueFields="1,2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_MRKT">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="MKT_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="GU_ID" defaultValue="Need to Google" />
+          <Column columnName="GU_TYP" defaultValue="COUNTRY" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="GU_CNT" defaultValue="1" />
+          <Column columnName="CREATED_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="PREF_TRDNG_CDE" defaultValue="Need to Google" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="MKT_NME" vendorFieldRef="2" maxAllowableLength="256" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_MKID">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="MKID_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="MKT_ID_CTXT_TYP" defaultValue="BBEXCH" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CON:BB" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="MKT_ID" vendorFieldRef="1" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="3" tableName="FT_T_MKFD">
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="CONTEXT" defaultValue="BBEXCH" />
+          <Column columnName="ACTION" defaultValue="ADD" />
+          <Column columnName="COUNTRY" defaultValue="Need to Google" />
+          <Column columnName="CNTRY_CDE" defaultValue="Need to Google" />
+          <Column columnName="CITY" defaultValue="Need to Google" />
+          <Column columnName="GU_TYP" defaultValue="COUNTRY" />
+          <Column columnName="PREF_TRDNG_CDE" defaultValue="Google" />
+          <Column columnName="CREATION_DTE" defaultValue="SYSDATE" />
+          <Column columnName="GEN_DTE" defaultValue="SYSDATE" />
+          <Column columnName="STATUS" defaultValue="ACTIVE" />
+          <Column columnName="SOURCE" defaultValue="BB" />
+          <Column columnName="APPROVED" defaultValue="N" />
+          <Column columnName="LATEST_YN" defaultValue="Y" />
+          <Column columnName="COMPOSITE_CDE" defaultValue="Identify the Comp. exch.code associated" />
+          <Column columnName="COMPOSITE_NME" defaultValue="Identify the Composite exchange long name associated." />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXCH_CDE" vendorFieldRef="1" maxAllowableLength="40" />
+          <Column columnName="MRKT_NME" vendorFieldRef="2" maxAllowableLength="256" />
+        </MappedEntry>
+        <WhereClause>
+          <Column columnName="EXCH_CDE" vendorFieldRef="1" />
+        </WhereClause>
+        <RelatedSuggestions>
+          <Suggestion value="Identify the ISO MIC associated and update ISO_MRKT_CDE before Approval" />
+          <Suggestion value="#####Following are the queries where above suggestions apply#####" />
+        </RelatedSuggestions>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="MKT_OID" childColumn="MKT_OID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_EQY_OPT_EXCH" uniqueFields="1,2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_MRKT">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="MKT_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="GU_ID" defaultValue="Need to Google" />
+          <Column columnName="GU_TYP" defaultValue="COUNTRY" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="GU_CNT" defaultValue="1" />
+          <Column columnName="CREATED_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="PREF_TRDNG_CDE" defaultValue="Need to Google" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="MKT_NME" vendorFieldRef="2" maxAllowableLength="256" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_MKID">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="MKID_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="MKT_ID_CTXT_TYP" defaultValue="BBOPEXCH" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CON:BB" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="MKT_ID" vendorFieldRef="1" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="3" tableName="FT_T_MKFD">
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="CONTEXT" defaultValue="BBOPEXCH" />
+          <Column columnName="ACTION" defaultValue="ADD" />
+          <Column columnName="COUNTRY" defaultValue="Need to Google" />
+          <Column columnName="CNTRY_CDE" defaultValue="Need to Google" />
+          <Column columnName="CITY" defaultValue="Need to Google" />
+          <Column columnName="GU_TYP" defaultValue="COUNTRY" />
+          <Column columnName="PREF_TRDNG_CDE" defaultValue="Google" />
+          <Column columnName="CREATION_DTE" defaultValue="SYSDATE" />
+          <Column columnName="GEN_DTE" defaultValue="SYSDATE" />
+          <Column columnName="STATUS" defaultValue="ACTIVE" />
+          <Column columnName="SOURCE" defaultValue="BB" />
+          <Column columnName="APPROVED" defaultValue="N" />
+          <Column columnName="LATEST_YN" defaultValue="Y" />
+          <Column columnName="COMPOSITE_CDE" defaultValue="Identify the Comp.exch.code associated" />
+          <Column columnName="COMPOSITE_NME" defaultValue="Identify the Composite exchange long name associated." />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXCH_CDE" vendorFieldRef="1" maxAllowableLength="40" />
+          <Column columnName="MRKT_NME" vendorFieldRef="2" maxAllowableLength="256" />
+        </MappedEntry>
+        <WhereClause>
+          <Column columnName="EXCH_CDE" vendorFieldRef="1" />
+        </WhereClause>
+        <RelatedSuggestions>
+          <Suggestion value="Identify the ISO MIC associated and update ISO_MRKT_CDE before Approval" />
+          <Suggestion value="#####Following are the queries where above suggestions apply#####" />
+        </RelatedSuggestions>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="MKT_OID" childColumn="MKT_OID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_DVD_FREQ" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_DATA_CL_ID" defaultValue="FREQSPAN" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="2" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+        <RelatedSuggestions>
+          <Suggestion value="Translation table SPAN_TYP in Equity and mutual fund connectors also needs to be changed" />
+          <Suggestion value="#####Following are the queries where above suggestions apply#####" />
+        </RelatedSuggestions>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_DELIVERY_TYP" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00102208" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="8" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_EDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EDMV_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="NLS_CDE" defaultValue="ENGLISH" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="EFLD_DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="8" />
+          <Column columnName="EXT_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INTRNL_DMN_VAL_ID" childColumn="INTRNL_DMN_VAL_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_CORP_EXCH_CODE" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_MRKT">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="MKT_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="GU_ID" defaultValue="Need to Google" />
+          <Column columnName="GU_TYP" defaultValue="COUNTRY" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="GU_CNT" defaultValue="1" />
+          <Column columnName="CREATED_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="PREF_TRDNG_CDE" defaultValue="Need to Google" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="MKT_NME" vendorFieldRef="2" maxAllowableLength="256" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_MKID">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="MKID_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="MKT_ID_CTXT_TYP" defaultValue="BBFIEXCH" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CON:BB" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="MKT_ID" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="3" tableName="FT_T_MKFD">
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="CONTEXT" defaultValue="BBFIEXCH" />
+          <Column columnName="ACTION" defaultValue="ADD" />
+          <Column columnName="COUNTRY" defaultValue="Need to Google" />
+          <Column columnName="CNTRY_CDE" defaultValue="Need to Google" />
+          <Column columnName="CITY" defaultValue="Need to Google" />
+          <Column columnName="GU_TYP" defaultValue="COUNTRY" />
+          <Column columnName="PREF_TRDNG_CDE" defaultValue="Google" />
+          <Column columnName="CREATION_DTE" defaultValue="SYSDATE" />
+          <Column columnName="GEN_DTE" defaultValue="SYSDATE" />
+          <Column columnName="STATUS" defaultValue="ACTIVE" />
+          <Column columnName="SOURCE" defaultValue="BB" />
+          <Column columnName="APPROVED" defaultValue="N" />
+          <Column columnName="LATEST_YN" defaultValue="Y" />
+          <Column columnName="COMPOSITE_CDE" defaultValue="Identify the Comp.exch.code associated" />
+          <Column columnName="COMPOSITE_NME" defaultValue="Identify the Composite exchange long name associated." />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXCH_CDE" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="MRKT_NME" vendorFieldRef="2" maxAllowableLength="256" />
+        </MappedEntry>
+        <WhereClause>
+          <Column columnName="EXCH_CDE" vendorFieldRef="2" />
+        </WhereClause>
+        <RelatedSuggestions>
+          <Suggestion value="Identify the ISO MIC associated and update ISO_MRKT_CDE before Approval" />
+          <Suggestion value="#####Following are the queries where above suggestions apply#####" />
+        </RelatedSuggestions>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="MKT_OID" childColumn="MKT_OID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_MUNI_FORM" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00068059" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="8" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_EDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EDMV_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="NLS_CDE" defaultValue="ENGLISH" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="EFLD_DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="8" />
+          <Column columnName="EXT_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INTRNL_DMN_VAL_ID" childColumn="INTRNL_DMN_VAL_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_COMPOSITE_EXCH_CODE" uniqueFields="1,2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_MRKT">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="MKT_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="GU_ID" defaultValue="Need to Google" />
+          <Column columnName="GU_TYP" defaultValue="COUNTRY" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="GU_CNT" defaultValue="1" />
+          <Column columnName="CREATED_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="PREF_TRDNG_CDE" defaultValue="Need to Google" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="MKT_NME" vendorFieldRef="2" maxAllowableLength="256" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_MKID">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="MKID_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="MKT_ID_CTXT_TYP" defaultValue="BBEXCH" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CON:BB" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="MKT_ID" vendorFieldRef="1" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="3" tableName="FT_T_MKID">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="MKID_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="MKT_ID_CTXT_TYP" defaultValue="BBOPEXCH" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CON:BB" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="MKT_ID" vendorFieldRef="1" maxAllowableLength="40" />
+        </MappedEntry>
+        <RelatedSuggestions>
+          <Suggestion value="Also, add the value in ETT for COMPOSITE_EXCH_CODE" />
+          <Suggestion value="#####Following are the queries where above suggestions apply#####" />
+        </RelatedSuggestions>
+      </Entry>
+    </Table>
+    <Table tableId="4" tableName="FT_T_MKFD">
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="CONTEXT" defaultValue="BBEXCH" />
+          <Column columnName="ACTION" defaultValue="ADD" />
+          <Column columnName="COUNTRY" defaultValue="Google" />
+          <Column columnName="CNTRY_CDE" defaultValue="Google" />
+          <Column columnName="CITY" defaultValue="Google" />
+          <Column columnName="GU_TYP" defaultValue="COUNTRY" />
+          <Column columnName="PREF_TRDNG_CDE" defaultValue="Google" />
+          <Column columnName="CREATION_DTE" defaultValue="SYSDATE" />
+          <Column columnName="GEN_DTE" defaultValue="SYSDATE" />
+          <Column columnName="STATUS" defaultValue="ACTIVE" />
+          <Column columnName="SOURCE" defaultValue="BB" />
+          <Column columnName="APPROVED" defaultValue="N" />
+          <Column columnName="LATEST_YN" defaultValue="Y" />
+          <Column columnName="COMPOSITE_CDE" defaultValue="Identify the Comp.exch.code associated" />
+          <Column columnName="COMPOSITE_NME" defaultValue="Identify the Composite exchange long name associated." />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXCH_CDE" vendorFieldRef="1" maxAllowableLength="40" />
+          <Column columnName="MRKT_NME" vendorFieldRef="2" maxAllowableLength="256" />
+        </MappedEntry>
+        <WhereClause>
+          <Column columnName="EXCH_CDE" vendorFieldRef="1" />
+        </WhereClause>
+        <RelatedSuggestions>
+          <Suggestion value="Identify the ISO MIC associated and update ISO_MRKT_CDE before Approval" />
+          <Suggestion value="#####Following are the queries where above suggestions apply#####" />
+        </RelatedSuggestions>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="MKT_OID" childColumn="MKT_OID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+    <TableToTableRelation referDBParent="Y"  id="2">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="3" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="MKT_OID" childColumn="MKT_OID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_MARKET_STATUS" uniqueFields="1">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00101604" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="20" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_EDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EDMV_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="NLS_CDE" defaultValue="ENGLISH" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="20" />
+          <Column columnName="EXT_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INTRNL_DMN_VAL_ID" childColumn="INTRNL_DMN_VAL_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_MTG_DEAL_TYP" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00100885" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_WRT_SETTLE_TYP" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00068074" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="8" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_EDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EDMV_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="NLS_CDE" defaultValue="ENGLISH" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="8" />
+          <Column columnName="EXT_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INTRNL_DMN_VAL_ID" childColumn="INTRNL_DMN_VAL_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_MUNI_LETTER_CREDIT_TYP" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00101310" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="TBL_ID" defaultValue="ISLL" />
+          <Column columnName="COL_NME" defaultValue="COLL_TERMS_TXT" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_MUNI_OFFERING_TYP" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00102222" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_MUNI_PURPOSE" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00101620" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="TBL_ID" defaultValue="MNPU" />
+          <Column columnName="COL_NME" defaultValue="MUNI_PURP_TYP" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_EDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EDMV_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="NLS_CDE" defaultValue="ENGLISH" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="EXT_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INTRNL_DMN_VAL_ID" childColumn="INTRNL_DMN_VAL_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_MUNI_SOURCE" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00101103" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="TBL_ID" defaultValue="FNSC" />
+          <Column columnName="COL_NME" defaultValue="FUND_SRCE_TYP" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_EDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EDMV_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="NLS_CDE" defaultValue="ENGLISH" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="EXT_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INTRNL_DMN_VAL_ID" childColumn="INTRNL_DMN_VAL_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_STATE_CODE" uniqueFields="1">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_GUNT">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="CROSS_REF_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="PRNT_GU_TYP" defaultValue="COUNTRY,Verify if this is COUNTRY or anything else" />
+          <Column columnName="PRNT_GU_CNT" defaultValue="1" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="CAL_ID" defaultValue="PRPTUAL" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="STOP_PAY_IND" defaultValue="N" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="PRNT_GU_ID" vendorFieldRef="1" maxAllowableLength="8" />
+          <Column columnName="GU_NME" vendorFieldRef="2" maxAllowableLength="256" />
+          <Column columnName="CNTRY_CDE" vendorFieldRef="1" maxAllowableLength="6" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+	<Table tableId="2" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00101189" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:DM:MBUS" />
+          <Column columnName="MOD_RST_IND" defaultValue="C" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_MTG_COLLAT_SEASONING" uniqueFields="1">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00101444" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="TBL_ID" defaultValue="LMST" />
+          <Column columnName="COL_NME" defaultValue="COLL_SEASON_TYP" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="20" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_MTG_COMPLIANCE_CODE" uniqueFields="1">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00101494" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="TBL_ID" defaultValue="LMST" />
+          <Column columnName="COL_NME" defaultValue="MTGE_COMPL_CDE" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_MTG_PAY_METHOD" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00101403" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_MTG_SMMEA_STAT" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00101403" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="TBL_ID" defaultValue="LMCH" />
+          <Column columnName="COL_NME" defaultValue="SMMEA_STAT_TYP" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="8" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_EDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EDMV_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="NLS_CDE" defaultValue="ENGLISH" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="8" />
+          <Column columnName="EXT_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INTRNL_DMN_VAL_ID" childColumn="INTRNL_DMN_VAL_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_CPN_TYP_SPECIFIC" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00100175" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_DIVIDEND_RIGHTS" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00161378" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="TBL_ID" defaultValue="BDCH" />
+          <Column columnName="COL_NME" defaultValue="DISTR_EARN_TYP" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="2" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_EDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EDMV_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="NLS_CDE" defaultValue="ENGLISH" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="EFLD_DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="2" />
+          <Column columnName="EXT_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="3" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00100719" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="TBL_ID" defaultValue="EQCH" />
+          <Column columnName="COL_NME" defaultValue="DIV_RIGHTS_TYP" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INTRNL_DMN_VAL_ID" childColumn="INTRNL_DMN_VAL_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_EQY_INIT_PO_TYP" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00102222" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+        <RelatedSuggestions>
+          <Suggestion value="Translation table OFFER_TYPE also needs to be changed for BBXTEquity.msf" />
+          <Suggestion value="#####Following are the queries where above suggestions apply#####" />
+        </RelatedSuggestions>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_FUT_EXCH_NAME" uniqueFields="1">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_MRKT">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="MKT_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="GU_ID" defaultValue="Need to Google" />
+          <Column columnName="GU_TYP" defaultValue="COUNTRY" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="GU_CNT" defaultValue="1" />
+          <Column columnName="CREATED_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="PREF_TRDNG_CDE" defaultValue="Need to Google" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="MKT_NME" vendorFieldRef="2" maxAllowableLength="256" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_MKID">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="MKID_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="MKT_ID_CTXT_TYP" defaultValue="BBFTEXCH" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CON:BB" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="MKT_ID" vendorFieldRef="1" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="3" tableName="FT_T_MKID">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="MKID_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="MKT_ID_CTXT_TYP" defaultValue="BBOPEXCH" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CON:BB" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="MKT_ID" vendorFieldRef="1" maxAllowableLength="40" />
+        </MappedEntry>
+        <RelatedSuggestions>
+          <Suggestion value="Only if the yellow key has Comdty" />
+          <Suggestion value="#####Following are the queries where above suggestions apply#####" />
+        </RelatedSuggestions>
+      </Entry>
+    </Table>
+    <Table tableId="4" tableName="FT_T_MKFD">
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="CONTEXT" defaultValue="BBFTEXCH" />
+          <Column columnName="ACTION" defaultValue="ADD" />
+          <Column columnName="COUNTRY" defaultValue="Need to Google" />
+          <Column columnName="CNTRY_CDE" defaultValue="Need to Google" />
+          <Column columnName="CITY" defaultValue="Need to Google" />
+          <Column columnName="GU_TYP" defaultValue="COUNTRY" />
+          <Column columnName="PREF_TRDNG_CDE" defaultValue="Google" />
+          <Column columnName="CREATION_DTE" defaultValue="SYSDATE" />
+          <Column columnName="GEN_DTE" defaultValue="SYSDATE" />
+          <Column columnName="STATUS" defaultValue="ACTIVE" />
+          <Column columnName="SOURCE" defaultValue="BB" />
+          <Column columnName="APPROVED" defaultValue="N" />
+          <Column columnName="LATEST_YN" defaultValue="Y" />
+          <Column columnName="COMPOSITE_CDE" defaultValue="Identify the Comp.exch.code associated" />
+          <Column columnName="COMPOSITE_NME" defaultValue="Identify the Composite exchange long name associated." />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXCH_CDE" vendorFieldRef="1" maxAllowableLength="40" />
+          <Column columnName="MRKT_NME" vendorFieldRef="2" maxAllowableLength="256" />
+        </MappedEntry>
+        <WhereClause>
+          <Column columnName="EXCH_CDE" vendorFieldRef="1" />
+        </WhereClause>
+        <RelatedSuggestions>
+          <Suggestion value="Identify the ISO MIC associated and update ISO_MRKT_CDE before Approval" />
+          <Suggestion value="#####Following are the queries where above suggestions apply#####" />
+        </RelatedSuggestions>
+      </Entry>
+    </Table>
+    <Table tableId="5" tableName="FT_T_MKFD">
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="CONTEXT" defaultValue="BBOPEXCH" />
+          <Column columnName="ACTION" defaultValue="ADD" />
+          <Column columnName="COUNTRY" defaultValue="Google" />
+          <Column columnName="CNTRY_CDE" defaultValue="Google" />
+          <Column columnName="CITY" defaultValue="Google" />
+          <Column columnName="GU_TYP" defaultValue="COUNTRY" />
+          <Column columnName="PREF_TRDNG_CDE" defaultValue="Google" />
+          <Column columnName="CREATION_DTE" defaultValue="SYSDATE" />
+          <Column columnName="GEN_DTE" defaultValue="SYSDATE" />
+          <Column columnName="STATUS" defaultValue="ACTIVE" />
+          <Column columnName="SOURCE" defaultValue="BB" />
+          <Column columnName="APPROVED" defaultValue="N" />
+          <Column columnName="LATEST_YN" defaultValue="Y" />
+          <Column columnName="COMPOSITE_CDE" defaultValue="Identify the Comp.exch.code associated" />
+          <Column columnName="COMPOSITE_NME" defaultValue="Identify the Composite exchange long name associated." />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXCH_CDE" vendorFieldRef="1" maxAllowableLength="40" />
+          <Column columnName="MRKT_NME" vendorFieldRef="2" maxAllowableLength="256" />
+        </MappedEntry>
+        <WhereClause>
+          <Column columnName="EXCH_CDE" vendorFieldRef="1" />
+        </WhereClause>
+        <RelatedSuggestions>
+          <Suggestion
+            value="Identify the ISO MIC associated and update ISO_MRKT_CDE before Approval. If BBOPEXCH is to be given at all based on yellow key." />
+          <Suggestion value="#####Following are the queries where above suggestions apply#####" />
+        </RelatedSuggestions>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="MKT_OID" childColumn="MKT_OID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+    <TableToTableRelation referDBParent="Y"  id="2">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="3" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="MKT_OID" childColumn="MKT_OID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_OPT_EXER_TYP" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00100175" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="8" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_EDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EDMV_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="NLS_CDE" defaultValue="ENGLISH" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="EFLD_DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="8" />
+          <Column columnName="EXT_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INTRNL_DMN_VAL_ID" childColumn="INTRNL_DMN_VAL_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_PRICING_SOURCE" uniqueFields="1,2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <XmlTag tagId="1">
+      <XmlCol>
+        <Attr attrName="VALUE" vendorFieldRef="1" />
+        <TextContent vendorFieldRef="2" />
+      </XmlCol>
+    </XmlTag>
+  </Mapping>
+  <Mapping type="LU_REFIX_FREQ" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_DATA_CL_ID" defaultValue="FREQSPAN" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="2" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_RESET_IDX" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_DATA_CL_ID" defaultValue="FIXBASIS" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="8" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_EDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EDMV_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="NLS_CDE" defaultValue="ENGLISH" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="EFLD_DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="8" />
+          <Column columnName="EXT_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INTRNL_DMN_VAL_ID" childColumn="INTRNL_DMN_VAL_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_WRT_EXER_TYP" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00100814" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="1" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_EDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EDMV_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="NLS_CDE" defaultValue="ENGLISH" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="EFLD_DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="1" />
+          <Column columnName="EXT_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INTRNL_DMN_VAL_ID" childColumn="INTRNL_DMN_VAL_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_CALL_TYP" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00100153" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_EDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EDMV_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="NLS_CDE" defaultValue="ENGLISH" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="EFLD_DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="EXT_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INTRNL_DMN_VAL_ID" childColumn="INTRNL_DMN_VAL_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_MUNI_ESCROW_TYP" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00101617" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="TBL_ID" defaultValue="MNES" />
+          <Column columnName="COL_NME" defaultValue="ESCROW_TYP" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_EDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EDMV_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="NLS_CDE" defaultValue="ENGLISH" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="EFLD_DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="EXT_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INTRNL_DMN_VAL_ID" childColumn="INTRNL_DMN_VAL_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_PRE_RFND_TYP" uniqueFields="1">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00172044" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="C" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+	<Table tableId="2" tableName="FT_T_EDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EDMV_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="NLS_CDE" defaultValue="ENGLISH" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="EFLD_DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="40" />
+          <Column columnName="EXT_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INTRNL_DMN_VAL_ID" childColumn="INTRNL_DMN_VAL_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+	</TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_PUT_TYP" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00100168" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_EDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EDMV_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="NLS_CDE" defaultValue="ENGLISH" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="EFLD_DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="EXT_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INTRNL_DMN_VAL_ID" childColumn="INTRNL_DMN_VAL_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_SINK_FUND_REDEMP_METHOD" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00100172" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_XO_REDEMP_TYP" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00100178" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="TBL_ID" defaultValue="BDCH" />
+          <Column columnName="COL_NME" defaultValue="XO_RDM_TYP" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_SINK_FREQ" uniqueFields="1">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_DATA_CL_ID" defaultValue="FREQSPAN" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="2" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_EDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EDMV_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="NLS_CDE" defaultValue="ENGLISH" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="2" />
+          <Column columnName="EXT_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INTRNL_DMN_VAL_ID" childColumn="INTRNL_DMN_VAL_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_PRICING_SOURCE2" uniqueFields="1,2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <XmlTag tagId="1">
+      <XmlCol>
+        <Attr attrName="VALUE" vendorFieldRef="1" />
+        <TextContent vendorFieldRef="2" />
+      </XmlCol>
+    </XmlTag>
+  </Mapping>
+  <Mapping type="LU_PRICING_SOURCE3" uniqueFields="1,2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <XmlTag tagId="1">
+      <XmlCol>
+        <Attr attrName="VALUE" vendorFieldRef="1" />
+        <TextContent vendorFieldRef="2" />
+      </XmlCol>
+    </XmlTag>
+  </Mapping>
+  <Mapping type="LU_PRICING_SOURCE4" uniqueFields="1,2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <XmlTag tagId="1">
+      <XmlCol>
+        <Attr attrName="CURRENCY" vendorFieldRef="1" />
+        <TextContent vendorFieldRef="2" />
+      </XmlCol>
+    </XmlTag>
+  </Mapping>
+  <Mapping type="LU_CDR_COUNTRY_CODE" uniqueFields="1,2">
+	<!-- CDR_COUNTRY_CODE -->
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <XmlTag tagId="1">
+      <XmlCol>
+        <Attr attrName="VALUE" vendorFieldRef="1" />
+        <TextContent vendorFieldRef="2" />
+      </XmlCol>
+    </XmlTag>
+  </Mapping>
+  <Mapping type="LU_CDR_EXCH_CODE" uniqueFields="1,2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <XmlTag tagId="1">
+      <XmlCol>
+        <Attr attrName="VALUE" vendorFieldRef="1" />
+        <TextContent vendorFieldRef="2" />
+      </XmlCol>
+    </XmlTag>
+  </Mapping>
+  <Mapping type="LU_CDR_SETTLE_CODE" uniqueFields="1,2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <XmlTag tagId="1">
+      <XmlCol>
+        <Attr attrName="VALUE" vendorFieldRef="1" />
+        <TextContent vendorFieldRef="2" />
+      </XmlCol>
+    </XmlTag>
+  </Mapping>
+  <Mapping type="LU_MTG_POOL_TYP" uniqueFields="1">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00011580" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_CALL_FEATURE" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_DATA_CL_ID" defaultValue="FREQSPAN" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+        <RelatedSuggestions>
+          <Suggestion
+            value="Change is required also in the Translation table in BBMunicipals.msf,BBPreferreds.msf and BBCorpGovtConvPrfd.msf" />
+          <Suggestion value="#####Following are the queries where above suggestions apply#####" />
+        </RelatedSuggestions>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_PUT_FEATURE" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_DATA_CL_ID" defaultValue="FREQSPAN" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+        <RelatedSuggestions>
+          <Suggestion
+            value="Change is required also in the Translation table in BBMunicipals.msf,BBPreferreds.msf and BBCorpGovtConvPrfd.msf" />
+          <Suggestion value="#####Following are the queries where above suggestions apply#####" />
+        </RelatedSuggestions>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_MUNI_RECENT_REDEMP_TYP" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00068061" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_EDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EDMV_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="NLS_CDE" defaultValue="ENGLISH" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="EFLD_DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="EXT_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INTRNL_DMN_VAL_ID" childColumn="INTRNL_DMN_VAL_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_FLT_CPN_CONVENTION" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00100150" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_EDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EDMV_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="NLS_CDE" defaultValue="ENGLISH" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="EFLD_DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="EXT_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INTRNL_DMN_VAL_ID" childColumn="INTRNL_DMN_VAL_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_FUND_OBJECTIVE_LONG" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00163339" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="20" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+        <RelatedSuggestions>
+          <Suggestion value="Translation table BBGlobalMutualFund.msf needs to be changed if the size is greater than 20" />
+          <Suggestion value="#####Following are the queries where above suggestions apply#####" />
+        </RelatedSuggestions>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_CP_OPTIONAL" uniqueFields="1">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00003540" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="1" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+        <RelatedSuggestions>
+          <Suggestion value="Translation table BloombergCAX.msf needs to be changed as per mapping,consult BA" />
+          <Suggestion value="#####Following are the queries where above suggestions apply#####" />
+        </RelatedSuggestions>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_CP_PARI_PASU" uniqueFields="1">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_DATA_CL_ID" defaultValue="IND" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="1" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_CP_RENOUNCEABLE" uniqueFields="1">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_DATA_CL_ID" defaultValue="IND" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="1" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_CP_RIGHTS_OFFER_TYP" uniqueFields="1">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00102647" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="1" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+        <RelatedSuggestions>
+          <Suggestion value="Translation table in BloombergCAX.msf also needs to be changed" />
+          <Suggestion value="#####Following are the queries where above suggestions apply#####" />
+        </RelatedSuggestions>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_CP_SH_FRACTIONAL" uniqueFields="1">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00102658" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="1" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_EDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EDMV_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="NLS_CDE" defaultValue="ENGLISH" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="EFLD_DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="1" />
+          <Column columnName="EXT_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="3" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00072560" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="8" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="4" tableName="FT_T_EDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EDMV_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="NLS_CDE" defaultValue="ENGLISH" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="EFLD_DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="8" />
+          <Column columnName="EXT_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_CP_STAT" uniqueFields="1">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00161032" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="TBL_ID" defaultValue="IAOF" />
+          <Column columnName="COL_NME" defaultValue="OFFER_OTHER_COND_TYP" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="1" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_CP_STOCK_OPT" uniqueFields="1,2" decisionMakingFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <XmlTag tagId="1">
+      <XmlCol>
+        <Attr attrName="STOCK_OPT_CAX" vendorFieldRef="1" />
+        <TextContent vendorFieldRef="2" />
+      </XmlCol>
+    </XmlTag>
+  </Mapping>
+  <Mapping type="LU_CP_BANCR_TYP" uniqueFields="1">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00161059" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="8" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_EDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EDMV_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="NLS_CDE" defaultValue="ENGLISH" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="EFLD_DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="8" />
+          <Column columnName="EXT_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INTRNL_DMN_VAL_ID" childColumn="INTRNL_DMN_VAL_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_FUND_ASSET_CLASS_FOCUS" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00102655" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_EDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EDMV_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="NLS_CDE" defaultValue="ENGLISH" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="EFLD_DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="EXT_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INTRNL_DMN_VAL_ID" childColumn="INTRNL_DMN_VAL_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_CP_REDENOM_ROUND_METHOD" uniqueFields="1">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00101234" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+        <RelatedSuggestions>
+          <Suggestion value="Changes in the translation table in BloombergCAX.msf" />
+          <Suggestion value="#####Following are the queries where above suggestions apply#####" />
+        </RelatedSuggestions>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_CP_REDENOM_METHOD" uniqueFields="1">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00101233" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+        <RelatedSuggestions>
+          <Suggestion value="Changes in the translation table in BloombergCAX.msf" />
+          <Suggestion value="#####Following are the queries where above suggestions apply#####" />
+        </RelatedSuggestions>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_FUT_PX_SESSION" uniqueFields="1,2" decisionMakingFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <XmlTag tagId="1">
+      <XmlCol>
+        <Attr attrName="PRICING_SESSION_BBCommodityOptions_BBGlobalCommodityFutures" vendorFieldRef="1" />
+        <TextContent vendorFieldRef="2" />
+      </XmlCol>
+    </XmlTag>
+  </Mapping>
+  <Mapping type="LU_MAIN_OBLIGOR_TYP" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="01830369" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="8" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_SINKABLE_PAR_MARKET" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00100174" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="8" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_EQY_DVD_RIGHT_TYP_CURR" uniqueFields="1">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="TRANSLATION_TABLE">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <MappedEntry>
+          <Column columnName="SOURCE" vendorFieldRef="1" maxAllowableLength="1" />
+          <Column columnName="DESTINATION" vendorFieldRef="2" />
+        </MappedEntry>
+        <RelatedSuggestions>
+          <Suggestion value="Translation table RIGHTS_OFFER in BBXTEquity.msf needs to be updated" />
+          <Suggestion value="#####Following are the queries where above suggestions apply#####" />
+        </RelatedSuggestions>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_EQY_DVD_CASH_TYP_NEXT" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00163288" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="8" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_EDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EDMV_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="NLS_CDE" defaultValue="ENGLISH" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="EFLD_DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="8" />
+          <Column columnName="EXT_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INTRNL_DMN_VAL_ID" childColumn="INTRNL_DMN_VAL_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_COLLAT_TYPES" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_DATA_CL_ID" defaultValue="COLLTYPE" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="8" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00101311" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="8" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+        <RelatedSuggestions>
+          <Suggestion value="For 812 and 7x only" />
+          <Suggestion value="#####Following are the queries where above suggestions apply#####" />
+        </RelatedSuggestions>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_BRADY_BUS_DAY_CONV" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00100150" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="8" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_EQY_PO_TYP" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00102222" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_EQY_DVD_SPL_TYP_CURR" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="TRANSLATION_TABLE">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <MappedEntry>
+          <Column columnName="SOURCE" vendorFieldRef="1" maxAllowableLength="1" />
+          <Column columnName="DESTINATION" vendorFieldRef="2" />
+        </MappedEntry>
+        <RelatedSuggestions>
+          <Suggestion value="Translation table STOCK_SPLITA in BBXTEquity.msf needs to be updated" />
+          <Suggestion value="#####Following are the queries where above suggestions apply#####" />
+        </RelatedSuggestions>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_EXPECTED_REPORT_TYP" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00100418" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="TBL_ID" defaultValue="COST" />
+          <Column columnName="COL_NME" defaultValue="EXPT_EARN_ANNC_TYP" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_EDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EDMV_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="NLS_CDE" defaultValue="ENGLISH" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="EFLD_DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="EXT_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INTRNL_DMN_VAL_ID" childColumn="INTRNL_DMN_VAL_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_SEC_RESTRICT" uniqueFields="1">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00172005" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="1" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_EDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EDMV_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="NLS_CDE" defaultValue="ENGLISH" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="EFLD_DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="1" />
+          <Column columnName="EXT_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INTRNL_DMN_VAL_ID" childColumn="INTRNL_DMN_VAL_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_CP_DIST_AMT_STATUS" uniqueFields="1">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00163265" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="8" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+        <RelatedSuggestions>
+          <Suggestion value="Translation table CP_DIST_AMT_STATUS for IAIP.RTEPRCSTATTYP in BloombergCAX.msf" />
+          <Suggestion value="#####Following are the queries where above suggestions apply#####" />
+        </RelatedSuggestions>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_COLLATERAL_DES" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_DATA_CL_ID" defaultValue="COLLTYPE" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_EQY_DVD_STK_TYP_NEXT" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_EIAT">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EIAT_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="IACD_OID" defaultValue="Send MAil to BA" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BBEXT" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_ISSACT_TYP_TXT" vendorFieldRef="2" maxAllowableLength="40" />
+          <Column columnName="EXT_ISSACT_TYP_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+        <RelatedSuggestions>
+          <Suggestion value="Also changed in BBXTEquity for translation table DVD_STOCK" />
+          <Suggestion value="#####Following are the queries where above suggestions apply#####" />
+        </RelatedSuggestions>
+      </Entry>
+    </Table>
+  </Mapping>
+  <Mapping type="LU_COUNTRY_ISO" uniqueFields="1">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_DATA_CL_ID" defaultValue="COUNTRY" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="2" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+        <RelatedSuggestions>
+          <Suggestion value="Needs to be provided only on 820 version" />
+          <Suggestion value="#####Following are the queries where above suggestions apply#####" />
+        </RelatedSuggestions>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_EDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EDMV_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="NLS_CDE" defaultValue="ENGLISH" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="EFLD_DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_DMN_VAL_TXT" vendorFieldRef="1" maxAllowableLength="2" />
+          <Column columnName="EXT_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INTRNL_DMN_VAL_ID" childColumn="INTRNL_DMN_VAL_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_MTG_DTC_TYP" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_ID" defaultValue="00100496" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="8" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+        <RelatedSuggestions>
+          <Suggestion value="Needs to be provided only on 820 version" />
+          <Suggestion value="#####Following are the queries where above suggestions apply#####" />
+        </RelatedSuggestions>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_EDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EDMV_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="NLS_CDE" defaultValue="ENGLISH" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="EFLD_DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="8" />
+          <Column columnName="EXT_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INTRNL_DMN_VAL_ID" childColumn="INTRNL_DMN_VAL_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+  <Mapping type="LU_FFIEC_TEST" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_DATA_CL_ID" defaultValue="IND" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="N" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="1" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+        <RelatedSuggestions>
+          <Suggestion value="Needs to be provided only on 820 version" />
+          <Suggestion value="#####Following are the queries where above suggestions apply#####" />
+        </RelatedSuggestions>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_EDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EDMV_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="NLS_CDE" defaultValue="ENGLISH" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="EFLD_DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="1" />
+          <Column columnName="EXT_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INTRNL_DMN_VAL_ID" childColumn="INTRNL_DMN_VAL_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+   <Mapping type="FUT_PX_SESSION" uniqueFields="2">
+    <VendorField sequence="1" />
+    <VendorField sequence="2" />
+    <VendorField sequence="3" />
+    <Table tableId="1" tableName="FT_T_IDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="INTRNL_DMN_VAL_ID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="FLD_DATA_CL_ID" defaultValue="IND" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:MBUS:CONNECT" />
+          <Column columnName="MOD_RST_IND" defaultValue="C" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="INTRNL_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="1" />
+          <Column columnName="INTRNL_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <Table tableId="2" tableName="FT_T_EDMV">
+      <Constraints>
+        <PrimaryKeyConstraint id="1" name="PrimaryKey">
+          <KeyColumn name="EDMV_OID" value="generated" />
+        </PrimaryKeyConstraint>
+      </Constraints>
+      <Entry execute="N" id="1">
+        <DefaultEntry>
+          <Column columnName="NLS_CDE" defaultValue="ENGLISH" />
+          <Column columnName="LAST_CHG_TMS" defaultValue="SYSDATE" />
+          <Column columnName="LAST_CHG_USR_ID" defaultValue="GS:CON:BBCD" />
+          <Column columnName="DATA_STAT_TYP" defaultValue="ACTIVE" />
+          <Column columnName="DATA_SRC_ID" defaultValue="BB" />
+          <Column columnName="START_TMS" defaultValue="SYSDATE" />
+          <Column columnName="EFLD_DATA_SRC_ID" defaultValue="BB" />
+        </DefaultEntry>
+        <MappedEntry>
+          <Column columnName="EXT_DMN_VAL_TXT" vendorFieldRef="2" maxAllowableLength="1" />
+          <Column columnName="EXT_DMN_VAL_NME" vendorFieldRef="2" maxAllowableLength="40" />
+        </MappedEntry>
+      </Entry>
+    </Table>
+    <TableToTableRelation referDBParent="Y"  id="1">
+      <ParentTable tableId="1" entryId="1" />
+      <ChildTable tableId="2" entryId="1" />
+      <ReferentialConstraints>
+        <PrimaryKeyReference id="1" name="PrimaryKeyReference">
+          <ColumnReference parentColumn="INTRNL_DMN_VAL_ID" childColumn="INTRNL_DMN_VAL_ID" />
+        </PrimaryKeyReference>
+      </ReferentialConstraints>
+    </TableToTableRelation>
+  </Mapping>
+</MappingConfig>
