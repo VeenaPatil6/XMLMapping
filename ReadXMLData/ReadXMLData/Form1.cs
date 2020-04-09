@@ -45,6 +45,7 @@ namespace ReadXMLData
             dt.Columns.Add("Table ID", typeof(string));
             dt.Columns.Add("FLD_DATA_CL_ID", typeof(string));
             dt.Columns.Add("FLD_ID", typeof(string));
+            dt.Columns.Add("SUGGESTIONS", typeof(string));
 
             return dt;
         }
@@ -57,6 +58,8 @@ namespace ReadXMLData
             #region "Reading XML with LINQ"
             string defaultValue = null;
             string mappingtype = string.Empty;
+            string strsuggestions = string.Empty;
+            List<string> lstSugg = new List<string>();
             DataSet ds = new DataSet();
 
             FileInfo file = new FileInfo(@"S:\Config.xml");
@@ -94,6 +97,7 @@ namespace ReadXMLData
                         foreach (var defaultEntry in entrynode)
                         {
                             IEnumerable<XElement> defaultentries = from ent in entrynode.Elements("DefaultEntry") select ent;
+                            IEnumerable<XElement> suggestions = from sug in entrynode.Elements("RelatedSuggestions") select sug;
 
                             foreach (var col in defaultentries)
                             {
@@ -145,6 +149,38 @@ namespace ReadXMLData
                                 }
 
                             }
+                            if (suggestions.Count() != 0)
+                            {
+                                foreach (var sugg in suggestions)
+                                {
+                                    string hashsugg = "#####";
+                                    IEnumerable<XElement> suggcoll = from co in sugg.Elements("Suggestion") select co;
+
+                                    IEnumerable<XElement> reqsugg = (from c in suggcoll
+                                                                            where ((!c.Attribute("value").Value.StartsWith(hashsugg)))
+                                                                            select c);
+                                    if (reqsugg.Count() != 0)
+                                    {
+                                        foreach (var rsugg in reqsugg)
+                                        {
+                                            
+                                            if (reqsugg.Count() > 1)
+                                            {
+                                                lstSugg.Add(rsugg.FirstAttribute.Value);
+                                                strsuggestions = string.Join(" | ", lstSugg);
+                                            }
+                                            else
+                                            {
+                                                strsuggestions = rsugg.FirstAttribute.Value;
+                                            }
+                                        }
+                                    }
+                                    row["SUGGESTIONS"] = strsuggestions.TrimEnd();
+
+                                }
+                            }
+
+
 
                         }
                         dt.Rows.Add(row);
@@ -180,7 +216,7 @@ namespace ReadXMLData
                         con.Close();
                     }
 
-                    string InsertCommand = "INSERT INTO [XMLMapping] (MappingType, TableName, TableId, FLD_DATA_CL_ID, FLD_ID) VALUES (?, ?, ?, ?, ?)";
+                    string InsertCommand = "INSERT INTO [XMLMapping] (MappingType, TableName, TableId, FLD_DATA_CL_ID, FLD_ID, SUGGESTIONS) VALUES (?, ?, ?, ?, ?, ?)";
 
                     using (OdbcCommand cmd = new OdbcCommand(InsertCommand, con))
                     {
@@ -195,6 +231,7 @@ namespace ReadXMLData
                                 cmd.Parameters.AddWithValue("@p3", "");
                                 cmd.Parameters.AddWithValue("@p4", "");
                                 cmd.Parameters.AddWithValue("@p5", "");
+                                cmd.Parameters.AddWithValue("@p6", "");
 
                                 foreach (DataRow r in ds.Tables[0].Rows)
                                 {
@@ -203,6 +240,8 @@ namespace ReadXMLData
                                     cmd.Parameters["@p3"].Value = String.IsNullOrEmpty(r["Table ID"].ToString()) ? string.Empty : r["Table ID"].ToString();
                                     cmd.Parameters["@p4"].Value = String.IsNullOrEmpty(r["FLD_DATA_CL_ID"].ToString()) ? string.Empty : r["FLD_DATA_CL_ID"].ToString();
                                     cmd.Parameters["@p5"].Value = String.IsNullOrEmpty(r["FLD_ID"].ToString()) ? string.Empty : r["FLD_ID"].ToString();
+                                    cmd.Parameters["@p6"].Value = String.IsNullOrEmpty(r["SUGGESTIONS"].ToString()) ? string.Empty : r["SUGGESTIONS"].ToString();
+                                    
                                     cmd.ExecuteNonQuery();
                                 }
                                 MessageBox.Show("Done.");
